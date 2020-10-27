@@ -16,7 +16,7 @@ namespace UI
                 if (_resDictionary == null)
                 {
                     _resDictionary = new ResourceDictionary();
-                    loadDictionary(SkinEnum.Light);
+                    LoadSkin(SkinEnum.Dark);
                 }
                 return _resDictionary;
 
@@ -24,9 +24,23 @@ namespace UI
 
         }
 
-        private static void loadDictionary(SkinEnum light)
+        public static SkinEnum  ActualSkin { get; set; } = SkinEnum.Light;
+
+        public static void LoadSkin(SkinEnum skinEnum)
         {
-            setResource(SkinKey.MainBackground,new SolidColorBrush(ColorFromHex("#FF0F0F0F")));
+            ActualSkin = skinEnum;
+            //Common
+            setResource(SkinKey.MainForeground, Brushes.Green);
+            //Specific
+            if (skinEnum == SkinEnum.Light)
+            {
+                setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FFFFFF00")));
+            }
+            if (skinEnum == SkinEnum.Dark)
+            {
+                setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FF0F0F0F")));
+            }
+
         }
 
         private static void setResource(SkinKey themeKey, object resource)

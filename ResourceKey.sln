@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{C636E748-7BC4-4BD4-9E8C-68746368AA92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "..\UI\UI.csproj", "{46D67A4A-2D25-4824-BC89-037A2E81A335}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{46D67A4A-2D25-4824-BC89-037A2E81A335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

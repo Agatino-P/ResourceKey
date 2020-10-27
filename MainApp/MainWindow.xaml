@@ -11,14 +11,18 @@
     Height="450"
     mc:Ignorable="d">
     <StackPanel>
+        <Button
+            x:Name="btnSwap"
+            Click="btnSwap_Click"
+            Content="Swap"
+            FontSize="48"
+            Foreground="{ui:SkinResource ResourceKey=MainForeground}" />
+
         <Rectangle
-            Width="200"
-            Height="200"
+            Height="100"
+            Margin="10"
             Fill="{ui:SkinResource ResourceKey=MainBackground}" />
-        <Rectangle
-            Width="200"
-            Height="200"
-            Fill="{StaticResource FromApp}" />
+
 
     </StackPanel>
 </Window>

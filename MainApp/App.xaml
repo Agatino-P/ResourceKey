@@ -9,7 +9,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/UI;component/Skins/UI.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <SolidColorBrush x:Key="FromApp" Color="Green" />
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

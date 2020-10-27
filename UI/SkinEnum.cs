@@ -7,6 +7,7 @@ namespace UI
 {
     public enum SkinEnum
     {
-        Light
+        Light,
+        Dark
     }
 }
