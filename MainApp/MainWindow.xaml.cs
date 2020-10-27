@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Windows;
 using UI;
 
 namespace MainApp
@@ -15,8 +18,14 @@ namespace MainApp
 
         private void btnSwap_Click(object sender, RoutedEventArgs e)
         {
-            SkinEnum skin = (Skin.ActualSkin == SkinEnum.Light) ? SkinEnum.Dark : SkinEnum.Light;
-            Skin.LoadSkin(skin);
+
+            
+            SkinEnum[] skinEnums = (SkinEnum[])Enum.GetValues(typeof(SkinEnum));
+            LinkedList<SkinEnum> linkedList = new LinkedList<SkinEnum>(skinEnums);
+            LinkedListNode<SkinEnum> listNode = linkedList.Find(Skin.ActualSkin);
+            SkinEnum next = listNode.Next!=null?listNode.Next.Value: linkedList.First.Value;
+
+            Skin.LoadSkin(next);
         }
     }
 }

@@ -32,13 +32,25 @@ namespace UI
             //Common
             setResource(SkinKey.MainForeground, Brushes.Green);
             //Specific
+            switch (skinEnum)
+            {
+                case SkinEnum.Light:
+                setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FFFFFF00")));
+                    break;
+                case SkinEnum.Dark:
+                setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FF0F0F0F")));
+                    break;
+                case SkinEnum.Red:
+                    setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FFFF0000")));
+                    break;
+                default:
+                    break;
+            }
             if (skinEnum == SkinEnum.Light)
             {
-                setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FFFFFF00")));
             }
             if (skinEnum == SkinEnum.Dark)
             {
-                setResource(SkinKey.MainBackground, new SolidColorBrush(ColorFromHex("#FF0F0F0F")));
             }
 
         }
